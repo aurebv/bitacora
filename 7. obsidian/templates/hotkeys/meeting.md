@@ -1,0 +1,1 @@
+[[M<%tp.date.now("MM.DD")%>-<%tp.file.cursor()%>]]

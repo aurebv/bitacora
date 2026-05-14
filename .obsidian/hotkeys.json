@@ -1,0 +1,50 @@
+{
+  "templater-obsidian:6. obsidian/templates/hotkeys/meeting.md": [
+    {
+      "modifiers": [
+        "Alt"
+      ],
+      "key": "M"
+    }
+  ],
+  "templater-obsidian:6. obsidian/templates/hotkeys/task.md": [
+    {
+      "modifiers": [
+        "Alt"
+      ],
+      "key": "T"
+    }
+  ],
+  "templater-obsidian:6. obsidian/templates/hotkeys/bitacora.md": [
+    {
+      "modifiers": [
+        "Alt"
+      ],
+      "key": "B"
+    }
+  ],
+  "templater-obsidian:6. obsidian/templates/hotkeys/hour.md": [
+    {
+      "modifiers": [
+        "Alt"
+      ],
+      "key": "H"
+    }
+  ],
+  "templater-obsidian:7. obsidian/templates/hotkeys/objective.md": [
+    {
+      "modifiers": [
+        "Alt"
+      ],
+      "key": "O"
+    }
+  ],
+  "templater-obsidian:7. obsidian/templates/hotkeys/task.md": [
+    {
+      "modifiers": [
+        "Alt"
+      ],
+      "key": "T"
+    }
+  ]
+}

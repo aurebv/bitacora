@@ -1,0 +1,67 @@
+{
+  "command_timeout": 5,
+  "templates_folder": "7. obsidian/templates",
+  "templates_pairs": [
+    [
+      "",
+      ""
+    ]
+  ],
+  "trigger_on_file_creation": true,
+  "auto_jump_to_cursor": true,
+  "enable_system_commands": false,
+  "shell_path": "",
+  "user_scripts_folder": "",
+  "enable_folder_templates": true,
+  "folder_templates": [
+    {
+      "folder": "/",
+      "template": "7. obsidian/templates/contramaestre.md"
+    },
+    {
+      "folder": "1. bitacora",
+      "template": "7. obsidian/templates/bitacora organizer.md"
+    },
+    {
+      "folder": "2. meetings",
+      "template": "7. obsidian/templates/meetings organizer.md"
+    },
+    {
+      "folder": "4. tasks",
+      "template": "7. obsidian/templates/tasks organizer.md"
+    },
+    {
+      "folder": "5. dashboards",
+      "template": "7. obsidian/templates/dashboard creator.md"
+    },
+    {
+      "folder": "3. objectives",
+      "template": "7. obsidian/templates/objective creator.md"
+    }
+  ],
+  "enable_file_templates": false,
+  "file_templates": [
+    {
+      "regex": ".*",
+      "template": ""
+    }
+  ],
+  "syntax_highlighting": true,
+  "syntax_highlighting_mobile": false,
+  "enabled_templates_hotkeys": [
+    "7. obsidian/templates/hotkeys/meeting.md",
+    "7. obsidian/templates/hotkeys/task.md",
+    "7. obsidian/templates/hotkeys/bitacora.md",
+    "7. obsidian/templates/hotkeys/hour.md",
+    "7. obsidian/templates/hotkeys/objective.md"
+  ],
+  "startup_templates": [
+    ""
+  ],
+  "intellisense_render": 1,
+  "ignore_folders_on_creation": [
+    {
+      "folder": ""
+    }
+  ]
+}
