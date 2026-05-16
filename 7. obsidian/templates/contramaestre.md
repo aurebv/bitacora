@@ -41,12 +41,12 @@ else if (fileName.startsWith(`T${day}`)){
 //objectives
 else if (fileName.startsWith(`O-`)){
 	// move (and rename)
-	await tp.file.move(`3. objecives/${fileName}`)
-	// INYECTAR METADATA: Solo si el archivo está vacío para no sobreescribir 
-	const content = await tp.file.content; 
-	if (content.trim() === "") { 
-		const tFile = tp.file.find_tfile(fileName); 
-		await app.vault.modify(tFile, taskMetadata); 
-	}
+	await tp.file.move(`3. objectives/${fileName}`);
+	// 2. Traes el contenido del dataview de forma segura 
+	const dvCode = await tp.file.include("[[objective dataview]]"); 
+	// 3. Lo inyectas directamente en la nota 
+	tR += dvCode;
 }
 %>
+
+

@@ -46,5 +46,13 @@
       ],
       "key": "T"
     }
+  ],
+  "templater-obsidian:7. obsidian/templates/hotkeys/bitacora.md": [
+    {
+      "modifiers": [
+        "Alt"
+      ],
+      "key": "B"
+    }
   ]
 }

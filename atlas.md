@@ -6,11 +6,11 @@
  */
 
 // 1. Fetch data
-const objectives = dv.pages('"objectives"');
+const objectives = dv.pages('"3. objectives"');
 const allTasks = dv.pages().file.tasks.where(t => !t.completed);
-const allTaskFiles = dv.pages('"3. tasks"');
+const allTaskFiles = dv.pages('"4. tasks"');
 
-// 2. Filter logic for standard tasks
+// 2. Filter logic for standard TODOs
 const isBacklog = (t) => t.text.includes("#backlog");
 const isNormalTodo = (t) => !t.text.includes("#backlog") && !t.text.includes("#objective");
 
@@ -33,7 +33,7 @@ const renderObjectives = () => {
         const total = linkedTasks.length;
         const completed = linkedTasks.where(t => t.status === "done").length;
         const percent = total > 0 ? Math.round((completed / total) * 100) : 0;
-        
+	    if (percent === 100) { return; } // si el objetivo fue completado no se renderiza
         // Render: [80%] Objective Name (4/5)
         // Uses a subtle gray for the task count to keep focus on the name
         dv.el("div", `**${percent}%** ${obj.file.link} <span style="color: gray; font-size: 0.85em;">(${completed}/${total})</span>`, 
