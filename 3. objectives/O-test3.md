@@ -1,11 +1,8 @@
-<%*
-// Constants for injecting Dataview code
-const bt = "```";
-const nl = "\n";
-%>
-## 📊 Progress
 
-<%- bt %>dataviewjs
+
+
+## 📊 Progress
+```dataviewjs
 /**
  * OBJECTIVE TRACKER
  * Automatically tracks tasks linked to this specific objective.
@@ -41,7 +38,7 @@ dv.el("hr", "");
 dv.header(3, "📑 Linked Tasks");
 
 if (total === 0) {
-    dv.paragraph("No tasks linked to this objective yet. Add `objective: [[" + objectiveTitle + "]]` to your task notes or create a task directly from here with Alt+E: task from objective.");
+    dv.paragraph("No tasks linked to this objective yet. Add `objective: [[" + objectiveTitle + "]]` to your task notes.");
 } else {
     dv.table(["Task", "Status", "Description"], 
         linkedTasks
@@ -53,7 +50,4 @@ if (total === 0) {
             ])
     );
 }
-<%- nl + bt %>
-
-
-*Do not include content in this note. Once it is archived it will be deleted. 
+```

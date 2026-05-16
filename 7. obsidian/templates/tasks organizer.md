@@ -1,4 +1,10 @@
 <%*
+const content = await tp.file.content;
+// if the note comes with content, then we do nothing
+if (content.trim().length > 0){
+	return;
+}
+
 const mainFolder = "4. tasks"; 
 const objectivesFolder = "3. objectives";
 const month = tp.date.now("YYYY.MM"); 
@@ -49,11 +55,8 @@ objective:
 `;
 }
 // Escribir el YAML y dejar una línea en blanco debajo 
-const content = await tp.file.content; 
-if (content.trim() === "") { 
-	const tFile = tp.file.find_tfile(fileName); 
-	await app.vault.modify(tFile, taskMetadata); 
-}
+const tFile = tp.file.find_tfile(fileName); 
+await app.vault.modify(tFile, taskMetadata); 
 %>
 
 

@@ -54,5 +54,13 @@
       ],
       "key": "B"
     }
+  ],
+  "templater-obsidian:7. obsidian/templates/hotkeys/meeting.md": [
+    {
+      "modifiers": [
+        "Alt"
+      ],
+      "key": "M"
+    }
   ]
 }
