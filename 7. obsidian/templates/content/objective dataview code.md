@@ -1,8 +1,11 @@
+<%*
+// Constants for injecting Dataview code
+const bt = "```";
+const nl = "\n";
+%>
+### Progress
 
-
-
-## 📊 Progress
-```dataviewjs
+<%- bt %>dataviewjs
 /**
  * OBJECTIVE TRACKER
  * Automatically tracks tasks linked to this specific objective.
@@ -35,10 +38,10 @@ dv.paragraph("**" + progress + "%** complete — " + completed + " of " + total 
 dv.el("hr", "");
 
 // 5. Rendering: Table of Commits
-dv.header(3, "📑 Linked Tasks");
+dv.header(3, "Linked Tasks");
 
 if (total === 0) {
-    dv.paragraph("No tasks linked to this objective yet. Add `objective: [[" + objectiveTitle + "]]` to your task notes.");
+    dv.paragraph("No tasks linked to this objective yet. Add `objective: [[" + objectiveTitle + "]]` to your task notes or create a task directly from here with **Alt+E: create task from objective.**");
 } else {
     dv.table(["Task", "Status", "Description"], 
         linkedTasks
@@ -50,7 +53,8 @@ if (total === 0) {
             ])
     );
 }
-```
+<%- nl + bt %>
 
 
 *Do not include content in this note. Once it is archived it will be deleted. 
+To archive the objective with its tasks use **Alt+E: objective archivist**

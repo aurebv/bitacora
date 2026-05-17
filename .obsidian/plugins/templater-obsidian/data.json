@@ -16,27 +16,27 @@
   "folder_templates": [
     {
       "folder": "/",
-      "template": "7. obsidian/templates/contramaestre.md"
+      "template": "7. obsidian/templates/folder templates/master folder template.md"
     },
     {
       "folder": "1. bitacora",
-      "template": "7. obsidian/templates/bitacora organizer.md"
+      "template": "7. obsidian/templates/folder templates/bitacora folder template.md"
     },
     {
       "folder": "2. meetings",
-      "template": "7. obsidian/templates/meetings organizer.md"
+      "template": "7. obsidian/templates/folder templates/meetings folder template.md"
     },
     {
       "folder": "4. tasks",
-      "template": "7. obsidian/templates/tasks organizer.md"
+      "template": "7. obsidian/templates/folder templates/tasks folder template.md"
     },
     {
       "folder": "5. dashboards",
-      "template": "7. obsidian/templates/dashboard creator.md"
+      "template": "7. obsidian/templates/folder templates/dashboards folder template.md"
     },
     {
       "folder": "3. objectives",
-      "template": "7. obsidian/templates/objective creator.md"
+      "template": "7. obsidian/templates/folder templates/objectives folder template.md"
     }
   ],
   "enable_file_templates": false,
@@ -53,8 +53,7 @@
     "7. obsidian/templates/hotkeys/task.md",
     "7. obsidian/templates/hotkeys/bitacora.md",
     "7. obsidian/templates/hotkeys/hour.md",
-    "7. obsidian/templates/hotkeys/objective.md",
-    "7. obsidian/templates/hotkeys/archive.md"
+    "7. obsidian/templates/hotkeys/objective.md"
   ],
   "startup_templates": [
     ""

@@ -14,7 +14,7 @@ let meetingName = await tp.system.prompt("meeting name");
 
 
 // move and rename file 
-try { // Si el nombre está vacío, forzamos el error para ir al catch 
+try { 
 	if (!meetingName || meetingName.trim() === "") throw new Error("empty file name"); 
 	await tp.file.move(`${monthPath}/M${day}-${meetingName}`);
 } catch (err) { 

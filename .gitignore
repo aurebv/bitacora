@@ -1,6 +1,25 @@
 .obsidian/workspace.json
-.obsidian/last-state.json
-.obsidian/graph.json
 .obsidian/workspace-mobile.json
+.obsidian/last-state.json
+.obsidian/cache/
+.obsidian/graph.json
+.obsidian/backups/
+
 .DS_Store
 Thumbs.db
+
+1. bitacora/*
+2. meetings/*
+3. objectives/*
+4. tasks/*
+5. dashboards/*
+6. files/*
+8. archive/*
+
+!1. bitacora/.gitkeep
+!2. meetings/.gitkeep
+!3. objectives/.gitkeep
+!4. tasks/.gitkeep
+!5. dashboards/.gitkeep
+!6. files/.gitkeep
+!8. archive/.gitkeep

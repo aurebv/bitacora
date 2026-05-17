@@ -31,7 +31,7 @@ else if (fileName.startsWith(`T${day}`)){
 	}
 	// move (and rename)
 	await tp.file.move(`${monthPath}/${fileName}`)
-	// INYECTAR METADATA: Solo si el archivo está vacío para no sobreescribir 
+	// write metadata, only if file is empty
 	const content = await tp.file.content; 
 	if (content.trim() === "") { 
 		const tFile = tp.file.find_tfile(fileName); 
@@ -42,9 +42,9 @@ else if (fileName.startsWith(`T${day}`)){
 else if (fileName.startsWith(`O-`)){
 	// move (and rename)
 	await tp.file.move(`3. objectives/${fileName}`);
-	// 2. Traes el contenido del dataview de forma segura 
-	const dvCode = await tp.file.include("[[objective dataview]]"); 
-	// 3. Lo inyectas directamente en la nota 
+	// retrieving data view code from content note
+	const dvCode = await tp.file.include("[[objective dataview code]]"); 
+	// write it down
 	tR += dvCode;
 }
 %>

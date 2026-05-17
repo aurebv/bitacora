@@ -9,4 +9,4 @@ if (objectiveName) {
 
 %>
 
-<% tp.file.include("[[objective dataview]]") %>
+<% tp.file.include("[[objective dataview code]]") %>

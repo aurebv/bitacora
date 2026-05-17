@@ -1,5 +1,11 @@
+<%*
+// Constants for injecting Dataview code
+const bt = "```";
+const nl = "\n";
+%>
 
-```dataviewjs
+
+<%- bt %>dataviewjs
 /**
  * TASK MANAGER SIDEBAR (ATLAS) - HIGH PERFORMANCE VERSION
  */
@@ -96,7 +102,5 @@ const renderSection = (title, taskList, color) => {
 renderObjectives();
 renderSection("TODOs", todos, "#4a6fa5");
 renderSection("Backlog", backlog, "#888888");
-```
-
-
+<%- nl + bt %>
 
