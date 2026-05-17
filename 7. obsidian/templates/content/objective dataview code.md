@@ -41,7 +41,7 @@ dv.el("hr", "");
 dv.header(3, "Linked Tasks");
 
 if (total === 0) {
-    dv.paragraph("No tasks linked to this objective yet. Add `objective: [[" + objectiveTitle + "]]` to your task notes or create a task directly from here with **Alt+Shift+E: create task from objective.**");
+    dv.paragraph("No tasks linked to this objective yet. Add `objective: [[" + objectiveTitle + "]]` to your task notes or create a task directly from here with **Alt+Shift+T: create task from objective.**");
 } else {
     dv.table(["Task", "Status", "Description"], 
         linkedTasks
@@ -57,4 +57,4 @@ if (total === 0) {
 
 
 *Do not include content in this note. Once it is archived it will be deleted. 
-To archive the objective with its tasks use **Alt+Shift+E: objective archivist**
+To archive the objective with its tasks use **Alt+Shift+T: objective archivist**
