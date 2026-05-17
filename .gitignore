@@ -14,7 +14,8 @@ Thumbs.db
 4. tasks/*
 5. dashboards/*
 6. files/*
-8. archive/*
+8. archive/objectives/*
+8. archive/tasks/*
 
 !1. bitacora/.gitkeep
 !2. meetings/.gitkeep
@@ -22,4 +23,5 @@ Thumbs.db
 !4. tasks/.gitkeep
 !5. dashboards/.gitkeep
 !6. files/.gitkeep
-!8. archive/.gitkeep
+!8. archive/objectives/.gitkeep
+!8. archive/tasks/.gitkeep
