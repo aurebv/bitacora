@@ -62,5 +62,13 @@
       ],
       "key": "M"
     }
+  ],
+  "templater-obsidian:7. obsidian/templates/hotkeys/hour.md": [
+    {
+      "modifiers": [
+        "Alt"
+      ],
+      "key": "H"
+    }
   ]
 }
