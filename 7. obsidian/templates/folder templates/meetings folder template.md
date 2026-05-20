@@ -1,5 +1,5 @@
 <%*
-const mainFolder = "4. tasks"; 
+const mainFolder = "2. meetings"; 
 const month = tp.date.now("YYYY.MM"); 
 const day = tp.date.now("MM.DD");     
 
@@ -18,6 +18,6 @@ try {
 	if (!meetingName || meetingName.trim() === "") throw new Error("empty file name"); 
 	await tp.file.move(`${monthPath}/M${day}-${meetingName}`);
 } catch (err) { 
-	await tp.file.move(`${meetingName}/M${day}-untitled`); 
+	await tp.file.move(`${monthPath}/M${day}-untitled`); 
 }
 %>

@@ -1,14 +1,9 @@
 <%*
-// 1. Rename logic
-const dashboardName = await tp.system.prompt("Dashboard name");
-if (dashboardName) {
-    await tp.file.rename(dashboardName);
-}
-
-// workaround to see dataview java code hier in template
+// Constants for injecting Dataview code
 const bt = "```";
-const nl = "\n"; 
+const nl = "\n";
 %>
+
 
 <%- bt %>dataviewjs
 /**

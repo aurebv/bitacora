@@ -1,1 +1,1 @@
-<%tp.date.now("HH:MM")%>
+<%tp.date.now("HH:mm")%>

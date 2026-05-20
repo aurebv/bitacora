@@ -10,7 +10,7 @@ const FOLDER_TASKS = '"4. tasks"';
 const TODO_SOURCES = '"" or "4. tasks" or "1. bitacora" or "2. meetings"'; 
 
 // 1. FETCH DATA
-const objectives = dv.pages(FOLDER_OBJECTIVES);
+const objectives = dv.pages(FOLDER_OBJECTIVES).sort(o => o.file.ctime, "desc");
 const rawTasks = dv.pages(TODO_SOURCES).file.tasks.where(t => !t.completed);
 const allTaskFiles = dv.pages(FOLDER_TASKS);
 
@@ -25,6 +25,9 @@ for (let task of rawTasks) {
         todos.push(task);
     }
 }
+
+todos.reverse(); // they inherited the order of the notes, we want the new things first
+backlog.reverse();
 
 // 3. OPTIMIZATION: Pre-group tasks by objective (Indexing)
 // This avoids running .where() inside the objectives loop
