@@ -1,10 +1,12 @@
 <%*
-const mainFolder = "2. meetings"; 
+//const mainFolder = "2. meetings"; 
+const currentFolder = tp.file.folder(true);
 const month = tp.date.now("YYYY.MM"); 
 const day = tp.date.now("MM.DD");     
 
 // path 
-const monthPath = `${mainFolder}/${month}`;
+//const monthPath = `${mainFolder}/${month}`;
+const monthPath = `${currentFolder}/${month}`;
 if (!app.vault.getAbstractFileByPath(monthPath)) {
     await app.vault.createFolder(monthPath);
 }

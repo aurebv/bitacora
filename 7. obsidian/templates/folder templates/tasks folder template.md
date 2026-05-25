@@ -5,7 +5,8 @@ if (content.trim().length > 0){
 	return;
 }
 
-const mainFolder = "4. tasks"; 
+//const mainFolder = "4. tasks"; 
+const currentFolder = tp.file.folder(true);
 const objectivesFolder = "3. objectives";
 const month = tp.date.now("YYYY.MM"); 
 const day = tp.date.now("MM.DD");     
@@ -15,14 +16,15 @@ const files = app.vault.getMarkdownFiles().filter(f => f.path.startsWith(objecti
 const objectiveNames = files.map(f => f.basename);
 const options = ["❌ No objective", ...objectiveNames];
 
-//2. mostarar selector 
+//2. show selector 
 let selectedObjective = await tp.system.suggester(options, options, false, "Select an objective (Esc to skip)");
 if (selectedObjective === "❌ No objective" || !selectedObjective) { 
 	selectedObjective = ""; 
 } 
 
 // path 
-const monthPath = `${mainFolder}/${month}`;
+//const monthPath = `${mainFolder}/${month}`;
+const monthPath = `${currentFolder}/${month}`
 if (!app.vault.getAbstractFileByPath(monthPath)) {
     await app.vault.createFolder(monthPath);
 }
