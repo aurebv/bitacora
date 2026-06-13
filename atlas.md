@@ -11,23 +11,52 @@ const TODO_SOURCES = '"" or "4. tasks" or "1. bitacora" or "2. meetings"';
 
 // 1. FETCH DATA
 const objectives = dv.pages(FOLDER_OBJECTIVES).sort(o => o.file.ctime, "desc");
-const rawTasks = dv.pages(TODO_SOURCES).file.tasks.where(t => !t.completed);
 const allTaskFiles = dv.pages(FOLDER_TASKS);
 
-// 2. OPTIMIZATION: Categorize TODOs in a single pass (O(n) instead of O(n*2))
+// order the TODOs after priority and cronological order 
+const rawTODOs = Array.from(dv.pages(TODO_SOURCES).file.tasks.where(t => !t.completed)); //JavaScript array
+
+// priority is defined with the number of ! at the end of the TODO
+const getPriority = (todo) => { 
+	const match = todo.text.match(/(!+)$/); // look for ! only at the end of the text 
+	return match ? match[0].length : 0; 
+};
+
+rawTODOs.sort((a, b) => {
+	// JavaScript sort: if return < 0 than a before b, if return > 0 than b before a 
+	if (!a || !b || !a.path || !b.path) return 0;
+	
+	const priorityA = getPriority(a); 
+	const priorityB = getPriority(b);
+	
+	// put the TODOs with more priority first
+	if (priorityA !== priorityB) {
+        return priorityB - priorityA; 
+    }
+    
+    // If TODOs are from diferent files, put the newest first 
+    if (a.path !== b.path) {
+        const fileA = dv.page(a.path);
+        const fileB = dv.page(b.path);
+        if (!fileA || !fileB) return 0;
+        return fileB.file.ctime - fileA.file.ctime; 
+    }
+    
+    // if the TODOs are from the same file, the ones under appear first 
+    return b.line - a.line; // 'line' represent the line number in the md file
+});
+
 const todos = [];
 const backlog = [];
 
-for (let task of rawTasks) {
-    if (task.text.includes("#backlog")) {
-        backlog.push(task);
+for (let todo of rawTODOs) {
+	todo.text = todo.text.replace(/\s*(!+)$/, ""); // do not render ! priority signs 
+    if (todo.text.includes("#backlog")) {
+        backlog.push(todo);
     } else {
-        todos.push(task);
+        todos.push(todo);
     }
 }
-
-todos.reverse(); // they inherited the order of the notes, we want the new things first
-backlog.reverse();
 
 // 3. OPTIMIZATION: Pre-group tasks by objective (Indexing)
 // This avoids running .where() inside the objectives loop
@@ -86,12 +115,12 @@ const renderObjectives = () => {
     }
 }
 
-const renderSection = (title, taskList, color) => {
+const renderSection = (title, TODOList, color) => {
 	dv.el("h3", title, { attr: { style: `color: ${color}; margin-top: 20px; border-bottom: 1px solid ${color}40; padding-bottom: 5px;` } });
-	if (taskList.length === 0) {
+	if (TODOList.length === 0) {
 		dv.paragraph("No pending tasks");
 	} else {
-		dv.taskList(taskList, false);
+		dv.taskList(TODOList, false);
 	}
 }
 
