@@ -13,9 +13,9 @@ Thumbs.db
 3. objectives/*
 4. tasks/*
 5. dashboards/*
-6. files/images/*
-8. archive/objectives/*
-8. archive/tasks/*
+6. files/*
+8. archive/*
+
 
 !1. bitacora/.gitkeep
 !2. meetings/.gitkeep
