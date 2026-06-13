@@ -1,5 +1,6 @@
 {
   "readableLineLength": false,
   "alwaysUpdateLinks": true,
-  "showUnsupportedFiles": false
+  "showUnsupportedFiles": false,
+  "attachmentFolderPath": "6. resources/images"
 }
