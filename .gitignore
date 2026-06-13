@@ -13,7 +13,7 @@ Thumbs.db
 3. objectives/*
 4. tasks/*
 5. dashboards/*
-6. files/*
+6. files/images/*
 8. archive/objectives/*
 8. archive/tasks/*
 
@@ -22,6 +22,6 @@ Thumbs.db
 !3. objectives/.gitkeep
 !4. tasks/.gitkeep
 !5. dashboards/.gitkeep
-!6. files/.gitkeep
+!6. files/images/.gitkeep
 !8. archive/objectives/.gitkeep
 !8. archive/tasks/.gitkeep
